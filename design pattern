@@ -1,0 +1,73 @@
+SINGLETON:
+What is Singleton Design Pattern?
+Why do we need Singleton?
+What are the characteristics of Singleton?
+How do you create Singleton in Java?
+Why constructor is private in Singleton?
+Why static instance variable used?
+Why global access point required?
+Difference between Singleton object and static class?
+Real-world examples of Singleton?
+When should Singleton be avoided?
+
+
+
+  
+
+FACTORY:
+What is Factory Design Pattern?
+Why Factory pattern needed?
+What problem does Factory solve?
+Difference between object creation and object usage?
+How Factory promotes loose coupling?
+Simple Factory vs Factory Method?
+Real-world examples of Factory pattern?
+Explain Factory using vehicle example.
+How does Factory support OCP?
+Difference between Factory and Constructor?
+
+  
+
+
+ABSTRACT FACTORY:
+What is Abstract Factory Pattern?
+Why Abstract Factory needed?
+Difference between Factory and Abstract Factory?
+What problem does Abstract Factory solve?
+Explain product family concept.
+Real-world example of Abstract Factory?
+How Abstract Factory supports consistency?
+Why called “factory of factories”?
+How Abstract Factory supports OCP?
+Explain Abstract Factory using UI themes example.
+
+
+  
+
+DECORATOR:
+What is Decorator Pattern?
+Why Decorator pattern needed?
+What problem does Decorator solve?
+Difference between inheritance and Decorator?
+How Decorator follows OCP?
+Real-world examples of Decorator?
+Explain Decorator using coffee example.
+Why composition used in Decorator?
+Difference between wrapper and decorator?
+How Decorator adds behavior dynamically?
+
+
+  
+
+
+STRATEGY:
+What is Strategy Pattern?
+Why Strategy pattern needed?
+What problem does Strategy solve?
+Difference between Strategy and inheritance?
+How Strategy supports OCP?
+Why composition preferred in Strategy?
+Real-world examples of Strategy?
+Explain Strategy using payment example.
+Difference between Strategy and State pattern?
+How runtime behavior switching works?
