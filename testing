@@ -1,0 +1,32 @@
+Junit 5 :
+What is JUnit?
+Why is JUnit used?
+Difference between manual testing and unit testing?
+What is unit testing?
+What are characteristics of good unit tests?
+Difference between JUnit 4 and JUnit 5?
+What are advantages of JUnit 5?
+Explain JUnit architecture.
+What is Jupiter in JUnit 5?
+What is Vintage engine?
+How to test exceptions in JUnit 5?
+Explain JUnit test lifecycle.
+Order of execution in JUnit?
+When test instance created?
+Why tests should be independent?
+What is test isolation?
+Why shared state dangerous?
+How parallel execution works in JUnit 5?
+
+
+Mockito:
+What is Mockito?
+Why Mockito needed?
+Difference between mocking and stubbing?
+Difference between mock and spy?
+Difference between fake, mock, and stub?
+Why mocking frameworks important?
+What problems Mockito solves?
+How Mockito works internally?
+Why interfaces easier to mock?
+How Mockito improves unit testing?
