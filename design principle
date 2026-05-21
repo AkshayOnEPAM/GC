@@ -1,1 +1,63 @@
+SRP:
+What is SRP?
+What does “one reason to change” actually mean?
+How do you identify multiple responsibilities in a class?
+Is SRP about number of methods or reasons to change?
+Can a class with 100 methods still follow SRP?
+Difference between functionality and responsibility?
+Why is SRP important in large-scale systems?
+How does SRP improve maintainability?
+How does SRP reduce merge conflicts in teams?
+Explain SRP violation with real-world example.
 
+
+OCP:
+Explain OCP.
+What does “open for extension” mean?
+What does “closed for modification” mean?
+Why is OCP important in enterprise applications?
+How do interfaces help implement OCP?
+Difference between extension and modification?
+Explain OCP using payment gateway example.
+How does polymorphism support OCP?
+How does strategy pattern relate to OCP?
+Why do switch-case statements often violate OCP?
+
+
+
+LSP:
+Explain LSP.
+Why is LSP important in inheritance?
+Difference between IS-A relationship and LSP?
+Why does wrong inheritance violate LSP?
+Explain classic Bird-Penguin problem.
+What is behavioral compatibility?
+Explain preconditions and postconditions in LSP.
+Can overriding methods violate LSP?
+What happens if subclass throws unsupported exception?
+Why is Rectangle-Square example famous?
+
+
+ISP:
+Explain ISP.
+Why are fat interfaces problematic?
+Difference between SRP and ISP?
+How does ISP improve maintainability?
+Explain ISP violation example.
+Why should interfaces be cohesive?
+How does ISP reduce unnecessary dependencies?
+Explain ISP using printer example.
+Why are large interfaces difficult to evolve?
+How does ISP help microservices?
+
+DIP:
+Explain DIP.
+Difference between dependency injection and DIP?
+What is dependency inversion?
+Why is tight coupling dangerous?
+How do interfaces help DIP?
+Explain DIP using database example.
+How does Spring implement DIP?
+What are high-level and low-level modules?
+Why should abstractions not depend on details?
+Constructor injection vs field injection?
