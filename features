@@ -1,0 +1,434 @@
+Java Lambda Expressions — In-Depth Interview Questions
+
+
+
+
+Core Concepts
+What is a lambda expression in Java?
+Why were lambda expressions introduced in Java 8?
+How do lambda expressions support functional programming in Java?
+Explain the syntax of a lambda expression.
+Difference between anonymous class and lambda expression?
+How does JVM internally represent lambda expressions?
+What is invokedynamic instruction?
+How LambdaMetafactory works internally?
+Why are lambda expressions considered “lightweight”?
+Are lambda expressions objects?
+Can lambda expressions have state?
+Why local variables used inside lambda must be effectively final?
+What is effectively final?
+How variable capture works in lambda expressions?
+Difference between capturing and non-capturing lambdas?
+How lambdas impact memory allocation?
+Are lambda expressions thread-safe?
+Can lambda expressions throw checked exceptions?
+How to handle exceptions inside lambda expressions?
+What happens if a lambda throws runtime exception?
+
+
+
+
+
+Lambda Internals
+Does lambda generate separate .class file?
+Difference between bytecode generated for anonymous class vs lambda?
+How does JVM optimize lambdas?
+What is synthetic method generated for lambda?
+Explain bridge methods in context of generics and lambdas.
+Can lambda expression access instance variables?
+Can lambda expression access static variables?
+Why this keyword behaves differently in lambda and anonymous class?
+What does this refer to inside lambda?
+Can lambda expressions be serialized?
+Why serialization of lambda is discouraged?
+What is target typing in lambda expressions?
+How compiler infers lambda parameter types?
+What is type inference in lambda expressions?
+What are poly expressions?
+Why lambda cannot exist without target type?
+Explain SAM conversion.
+Can lambda expression overload methods create ambiguity?
+Explain ambiguous method resolution with lambdas.
+Difference between expression lambda and block lambda?
+
+
+
+
+
+Functional Programming Concepts
+What is functional programming?
+What are first-class functions?
+Is Java fully functional programming language?
+What are pure functions?
+What are side effects in lambda expressions?
+Why immutability important in functional programming?
+Explain higher-order functions.
+What is function composition?
+What is declarative programming?
+Difference between imperative and declarative style?
+Functional Interfaces — In-Depth Interview Questions
+
+
+
+
+
+Basics
+What is functional interface?
+Why functional interface introduced?
+What is Single Abstract Method (SAM)?
+Can functional interface contain multiple default methods?
+Can functional interface contain static methods?
+Can functional interface contain Object class methods?
+Why methods from Object class are ignored in SAM count?
+What is @FunctionalInterface annotation?
+Is @FunctionalInterface mandatory?
+What happens if interface violates functional interface rules?
+Built-in Functional Interfaces
+Explain Predicate.
+Explain Function.
+Explain Consumer.
+Explain Supplier.
+Difference between Function and Consumer.
+Difference between Predicate and Function.
+Difference between Supplier and Callable.
+What is UnaryOperator?
+What is BinaryOperator?
+Why primitive specializations introduced?
+Explain IntPredicate, LongConsumer, DoubleSupplier.
+How primitive functional interfaces improve performance?
+What boxing/unboxing issues happen with generic interfaces?
+Explain BiFunction.
+Explain BiConsumer.
+Explain BiPredicate.
+
+
+
+
+Advanced Functional Interface Concepts
+Can functional interface extend another interface?
+Can child functional interface redefine abstract method?
+Can functional interface have generic type?
+What are marker functional interfaces?
+Explain custom functional interfaces.
+Can abstract class be functional interface?
+Explain default method conflict resolution.
+What happens when multiple interfaces provide same default method?
+Explain diamond problem in functional interfaces.
+Can lambda implement multiple interfaces?
+What is intersection type in lambda?
+Explain functional composition using andThen.
+Difference between compose and andThen.
+How currying can be implemented using functional interfaces?
+
+
+
+
+
+Optional — In-Depth Interview Questions
+Basics
+Why Optional introduced?
+What problem does Optional solve?
+Is Optional replacement for null?
+Should Optional be used everywhere?
+Why Optional should not be used for fields?
+Why Optional is discouraged in entity classes?
+Is Optional serializable?
+Difference between Optional.empty() and null?
+Explain Optional.of().
+Explain Optional.ofNullable().
+Difference between of() and ofNullable().
+What happens if null passed to Optional.of()?
+Explain Optional.get().
+Why get() is considered dangerous?
+Difference between isPresent() and ifPresent().
+Advanced Optional Usage
+Difference between orElse() and orElseGet().
+Why orElse() can hurt performance?
+Difference between orElseThrow() overloads.
+How lazy evaluation works in orElseGet()?
+Explain map() in Optional.
+Explain flatMap() in Optional.
+Difference between Optional.map and Stream.map.
+Why Optional.flatMap important?
+How to avoid nested Optionals?
+Explain Optional filtering.
+What is monadic behavior of Optional?
+How Optional supports functional programming?
+Can Optional contain null internally?
+Explain Optional chaining.
+Best practices for Optional usage.
+Optional Design Discussions
+Why Optional not meant for method parameters?
+Why Optional in collections is usually bad design?
+Optional vs Null Object Pattern?
+Optional vs exception handling?
+Performance impact of Optional?
+Is Optional value-based class?
+Why identity-sensitive operations discouraged on Optional?
+Can Optional cause memory overhead?
+Difference between Java Optional and Guava Optional?
+When not to use Optional?
+
+
+
+
+Stream API — In-Depth Interview Questions
+Basics
+What is Stream API?
+Why Stream API introduced?
+Difference between Collection and Stream?
+Are streams data structures?
+Explain stream pipeline.
+What are intermediate operations?
+What are terminal operations?
+Why streams are lazy?
+What is internal iteration?
+Difference between external iteration and internal iteration?
+Can stream be reused?
+Why stream can be consumed only once?
+Explain lazy evaluation in streams.
+What is short-circuiting in streams?
+Explain stateless vs stateful operations.
+
+
+
+
+Stream Internals
+How stream pipeline works internally?
+What is Spliterator?
+Why Spliterator introduced?
+Difference between Iterator and Spliterator?
+Explain characteristics of Spliterator.
+What is stream source?
+How stream operations are fused?
+Explain stream optimization by JVM.
+How lambda expressions integrate with streams?
+What happens internally during filter().map().collect()?
+Explain sink chaining in streams.
+How terminal operation triggers execution?
+Explain stream traversal mechanism.
+What is encounter order?
+Difference between ordered and unordered streams?
+Intermediate Operations
+Explain filter.
+Explain map.
+Explain flatMap.
+Difference between map and flatMap?
+Explain peek.
+Why peek should not be used for business logic?
+Explain distinct.
+Explain sorted.
+Explain limit.
+Explain skip.
+Explain takeWhile.
+Explain dropWhile.
+Difference between stateless and stateful intermediate operations.
+Why sorted is expensive?
+How distinct works internally?
+Terminal Operations
+Explain collect.
+Explain reduce.
+Difference between reduce and collect?
+Explain mutable reduction.
+Explain immutable reduction.
+Explain forEach.
+Difference between forEach and forEachOrdered.
+Explain count.
+Explain findFirst.
+Explain findAny.
+Difference between findFirst and findAny.
+Explain matching operations.
+Explain min and max.
+Explain toArray.
+What happens if terminal operation absent?
+Collectors
+What is Collector?
+Explain Collector interface components.
+What is supplier in Collector?
+What is accumulator in Collector?
+What is combiner in Collector?
+What is finisher in Collector?
+What are Collector characteristics?
+Explain Collectors.toList().
+Difference between toList() and Collectors.toList().
+Explain groupingBy.
+Explain partitioningBy.
+Difference between groupingBy and partitioningBy.
+Explain mapping collector.
+Explain downstream collectors.
+Explain collectingAndThen.
+Explain teeing collector.
+How custom collectors are implemented?
+Explain concurrent collectors.
+What makes collector thread-safe?
+Explain immutable collectors.
+Parallel Streams
+What is parallel stream?
+How parallel streams work internally?
+What is ForkJoinPool?
+Why common pool used?
+What are advantages of parallel streams?
+When should parallel streams be avoided?
+Explain data splitting in parallel streams.
+How workload balancing happens?
+Explain work stealing algorithm.
+Why parallel streams can degrade performance?
+What are thread-safety concerns in parallel streams?
+Why shared mutable state dangerous?
+Explain non-deterministic behavior in parallel streams.
+Difference between sequential and parallel reduction.
+How ordering impacts parallel stream performance?
+Why findAny() better for parallel streams?
+Explain false sharing in parallel processing.
+How CPU cores affect parallel streams?
+How blocking operations impact parallel streams?
+Best practices for parallel streams.
+
+
+
+
+Method References — In-Depth Interview Questions
+Basics
+What is method reference?
+Why method references introduced?
+Difference between lambda and method reference?
+When should method reference be preferred?
+What are types of method references?
+Explain static method reference.
+Explain instance method reference of particular object.
+Explain instance method reference of arbitrary object.
+Explain constructor reference.
+Explain array constructor reference.
+Advanced Concepts
+How compiler resolves method reference?
+Explain target typing in method references.
+Can overloaded methods create ambiguity?
+Difference between String::length and str -> str.length().
+How method references improve readability?
+Are method references always better than lambdas?
+Explain bound and unbound receiver.
+Can private methods be referenced?
+Can generic methods be referenced?
+Explain constructor reference with generics.
+Can method references throw checked exceptions?
+Explain compatibility rules for method references.
+How JVM internally handles method references?
+Difference between anonymous class and method reference.
+Performance difference between lambda and method reference.
+
+
+
+
+
+Records — In-Depth Interview Questions
+Basics
+What is record in Java?
+Why records introduced?
+What problems do records solve?
+Difference between POJO and record?
+Are records immutable?
+What members are automatically generated in records?
+Explain canonical constructor.
+Explain compact constructor.
+Difference between canonical and compact constructor.
+Can records have methods?
+Can records have static members?
+Can records extend classes?
+Why records implicitly extend java.lang.Record?
+Can records implement interfaces?
+Are record fields final?
+Advanced Record Concepts
+How records improve memory efficiency?
+Explain shallow immutability in records.
+Can mutable objects exist inside records?
+Why records unsuitable for JPA entities?
+Can records define custom equals/hashCode?
+How serialization works with records?
+Explain reflection support for records.
+What is record component?
+How compiler generates accessor methods?
+Difference between accessor and getter?
+Explain local records.
+Explain nested records.
+Can records be generic?
+Are records thread-safe?
+Records vs Lombok @Data.
+Records vs Kotlin data classes.
+Can records participate in pattern matching?
+Explain deconstruction patterns with records.
+Performance implications of records.
+Best practices for records.
+
+
+
+
+
+Sealed Classes — In-Depth Interview Questions
+Basics
+What is sealed class?
+Why sealed classes introduced?
+What problem do sealed classes solve?
+Difference between sealed class and final class?
+Difference between sealed and abstract class?
+What is permits clause?
+Explain controlled inheritance.
+What are permitted subclasses?
+What restrictions exist on sealed classes?
+What modifiers allowed for permitted subclasses?
+Difference between sealed, non-sealed, and final.
+Can interfaces be sealed?
+Can enums implement sealed interfaces?
+Explain exhaustive type checking.
+How sealed classes improve pattern matching?
+Advanced Concepts
+How JVM enforces sealing?
+Can permitted subclasses exist in different packages?
+Can permitted subclasses exist in different modules?
+What happens if subclass not permitted?
+Explain reflection support for sealed classes.
+How sealed classes improve maintainability?
+How sealed classes improve domain modeling?
+Sealed classes vs enums.
+Sealed classes vs marker interfaces.
+Explain Algebraic Data Types using sealed classes.
+How sealed classes support functional style programming?
+Explain sealed hierarchy with pattern matching switch.
+What is exhaustive switch analysis?
+Performance benefits of sealed classes.
+Best practices for sealed classes.
+
+
+
+
+
+Scenario-Based & Tricky Questions
+Why modifying external mutable variable inside stream is dangerous?
+Why streams discourage side effects?
+Can parallel stream cause race conditions?
+Why forEach order unpredictable in parallel streams?
+Why Optional should not be serialized?
+Why records unsuitable for mutable business entities?
+When lambda expression causes memory leak?
+Explain hidden class generation in lambdas.
+Why checked exceptions difficult with streams?
+Difference between map() and peek() misuse?
+Explain stream backpressure limitations.
+Why infinite streams can cause issues?
+Explain stack traces in lambda-heavy applications.
+Why debugging streams difficult?
+Explain stream fusion optimization.
+Difference between eager collection processing and lazy streams.
+Explain autoboxing overhead in streams.
+Why primitive streams important?
+Explain escape analysis with lambdas.
+When method references reduce readability?
+Can records break encapsulation?
+Why sealed classes useful in compiler design?
+How pattern matching complements records and sealed classes?
+Explain visitor pattern replacement using sealed classes.
+Can sealed classes improve switch safety?
+Explain DTO design using records.
+Difference between immutable object and record.
+Can record validation be enforced?
+Explain domain modeling using sealed hierarchies.
+Design an API using functional interfaces, streams, records, and sealed classes together.
