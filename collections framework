@@ -1,1 +1,381 @@
 https://chatgpt.com/c/6a12af4a-3390-8324-b897-5d15970546b5
+
+
+
+
+Java Collections Framework — In-Depth Interview Questions
+1. Java Collections Framework (JCF)
+Core Concepts
+What is the Java Collections Framework?
+Why was JCF introduced?
+What problems did JCF solve?
+Explain the architecture of JCF.
+Difference between Collection and Collections.
+Difference between Collection and Collections Framework.
+Difference between Iterable and Collection.
+Why Map is not part of Collection hierarchy?
+What are the major interfaces in JCF?
+Explain the hierarchy of JCF in detail.
+Internal Working
+How does dynamic resizing happen internally?
+What is load factor?
+What is capacity?
+Difference between initial capacity and load factor.
+What is rehashing?
+How hashing works internally?
+What is bucket in hashing?
+How collisions are resolved in Java?
+What is chaining?
+Explain hash distribution.
+Fail-Fast / Fail-Safe
+What is ConcurrentModificationException?
+What are fail-fast iterators?
+What are fail-safe iterators?
+Internal working of fail-fast iterator.
+What is modCount?
+Why ConcurrentHashMap iterator does not throw ConcurrentModificationException?
+Difference between fail-fast and fail-safe.
+Thread Safety
+Which collections are thread-safe?
+Difference between synchronized and concurrent collections.
+Explain Collections.synchronizedList().
+Why Vector is considered legacy?
+Difference between Vector and ArrayList.
+Difference between Hashtable and ConcurrentHashMap.
+Why concurrent collections are preferred over synchronized collections?
+Performance
+How do you choose the correct collection?
+Time complexity of all major collections.
+Which collection gives O(1) lookup?
+Why HashMap retrieval is O(1) on average?
+Worst-case complexity of HashMap.
+Why TreeMap operations are O(log n)?
+Memory overhead comparison between collections.
+Difference between array and collections in performance.
+Which collections are cache-friendly?
+Impact of resizing on performance.
+When LinkedList performs worse than ArrayList.
+2. List Interface
+Basics
+What is List interface?
+Characteristics of List.
+Difference between List and Set.
+Why List allows duplicates?
+Explain ordered collection.
+ArrayList
+Internal Working
+Internal structure of ArrayList.
+How ArrayList grows dynamically?
+Default capacity of ArrayList.
+Difference between size and capacity.
+How resizing happens internally?
+Growth factor in ArrayList.
+Why insertion in middle is expensive?
+Why random access is fast?
+Explain RandomAccess marker interface.
+What happens when ArrayList exceeds capacity?
+Performance
+Time complexity of add(), remove(), get().
+Why ArrayList get() is O(1)?
+Why remove() can be O(n)?
+When ArrayList is preferred over LinkedList?
+Memory overhead in ArrayList.
+Advanced
+Difference between new ArrayList() and new ArrayList<>(100).
+What is ensureCapacity()?
+What is trimToSize()?
+How subList works internally?
+Problems with subList.
+Concurrent modification issue with ArrayList.
+Immutable List vs unmodifiable List.
+LinkedList
+Internal structure of LinkedList.
+Why LinkedList uses doubly linked list?
+Node structure in LinkedList.
+Difference between singly and doubly linked list.
+Why random access is slow in LinkedList?
+Complexity of insertion/deletion.
+Memory overhead in LinkedList.
+Why LinkedList is rarely preferred in real systems?
+Difference between LinkedList and ArrayDeque.
+When LinkedList outperforms ArrayList.
+Cache locality issue in LinkedList.
+Vector / Stack
+Difference between Vector and ArrayList.
+Why Stack is legacy?
+Why ArrayDeque preferred over Stack?
+Synchronization overhead in Vector.
+Capacity increment in Vector.
+CopyOnWriteArrayList
+What is CopyOnWriteArrayList?
+Internal working of CopyOnWriteArrayList.
+Why reads are fast?
+Why writes are expensive?
+Use cases of CopyOnWriteArrayList.
+Iterator behavior in CopyOnWriteArrayList.
+3. Set Interface
+Basics
+What is Set interface?
+Why Set does not allow duplicates?
+How uniqueness is maintained?
+Can Set contain null values?
+Difference between HashSet, LinkedHashSet, TreeSet.
+HashSet
+Internal working of HashSet.
+How HashSet uses HashMap internally?
+Dummy object concept in HashSet.
+Complexity of HashSet operations.
+Why equals() and hashCode() important in HashSet?
+What happens if hashCode changes after insertion?
+Duplicate detection internally.
+Can HashSet maintain insertion order?
+LinkedHashSet
+Internal working of LinkedHashSet.
+How insertion order is maintained?
+Difference between HashSet and LinkedHashSet.
+Performance overhead in LinkedHashSet.
+TreeSet
+Internal structure of TreeSet.
+How TreeSet uses TreeMap internally?
+Red-Black Tree concept.
+Why TreeSet operations are O(log n)?
+Difference between natural ordering and custom ordering.
+What happens if comparator violates contract?
+Can TreeSet store heterogeneous objects?
+Difference between Comparable and Comparator in TreeSet.
+Null handling in TreeSet.
+EnumSet
+What is EnumSet?
+Why EnumSet is extremely fast?
+Internal implementation of EnumSet.
+Use cases of EnumSet.
+4. Map Interface
+Basics
+What is Map interface?
+Why Map is not part of Collection hierarchy?
+Can Map contain duplicate keys?
+Difference between keySet(), values(), entrySet().
+Explain Map.Entry.
+Difference between mutable and immutable map.
+HashMap
+Internal Working
+Internal structure of HashMap.
+Explain Node structure in HashMap.
+How hashing works in HashMap?
+Explain bucket indexing.
+How collisions are handled?
+What is treeification in HashMap?
+What is untreeification?
+Why Java 8 introduced Red-Black Tree in HashMap?
+Threshold for treeification.
+Explain resize operation.
+Explain rehashing.
+What is supplemental hashing?
+Why power of 2 capacity is used?
+What is hash spreading?
+Why hashCode alone is not enough?
+Difference between hashCode() and equals().
+Why immutable keys preferred?
+Why String is ideal HashMap key?
+What happens if mutable key changes?
+Worst-case complexity in HashMap.
+Advanced
+Explain put() internally.
+Explain get() internally.
+Explain remove() internally.
+What happens when duplicate key inserted?
+How null key handled in HashMap?
+Why only one null key allowed?
+Iteration order in HashMap.
+Difference between capacity and size.
+How load factor impacts performance?
+Why high load factor increases collisions?
+LinkedHashMap
+Internal working of LinkedHashMap.
+Difference between insertion-order and access-order.
+How LRU cache implemented using LinkedHashMap?
+Performance comparison with HashMap.
+TreeMap
+Internal structure of TreeMap.
+Explain Red-Black Tree balancing.
+Why TreeMap operations are O(log n)?
+Difference between TreeMap and HashMap.
+Can TreeMap store null keys?
+Comparator vs Comparable in TreeMap.
+NavigableMap methods.
+Explain ceilingEntry(), floorEntry(), higherEntry().
+Hashtable
+Difference between Hashtable and HashMap.
+Why Hashtable is legacy?
+Null handling in Hashtable.
+Synchronization overhead in Hashtable.
+ConcurrentHashMap
+Internal working of ConcurrentHashMap.
+Difference between synchronizedMap and ConcurrentHashMap.
+Segment locking in Java 7.
+CAS operations in Java 8 ConcurrentHashMap.
+What is lock striping?
+Why ConcurrentHashMap performs better?
+Why null keys/values not allowed?
+Weakly consistent iterator meaning.
+Atomic operations in ConcurrentHashMap.
+WeakHashMap / IdentityHashMap
+What is WeakHashMap?
+Use cases of WeakHashMap.
+Difference between WeakHashMap and HashMap.
+Garbage collection behavior in WeakHashMap.
+What is IdentityHashMap?
+Difference between equals() and == in IdentityHashMap.
+5. Queue Interface
+Basics
+What is Queue interface?
+Difference between Queue and Deque.
+Difference between offer() and add().
+Difference between poll() and remove().
+Difference between peek() and element().
+PriorityQueue
+Internal structure of PriorityQueue.
+How heap works internally?
+Min-heap vs Max-heap.
+Complexity of insertion and deletion.
+Why random access not supported?
+How custom comparator works in PriorityQueue?
+Can PriorityQueue contain null?
+Iteration order in PriorityQueue.
+ArrayDeque
+Internal structure of ArrayDeque.
+Why ArrayDeque faster than Stack?
+Circular array concept.
+Why null elements not allowed?
+Difference between ArrayDeque and LinkedList.
+Blocking Queues
+What is BlockingQueue?
+Difference between blocking and non-blocking queue.
+Explain producer-consumer problem.
+Difference between ArrayBlockingQueue and LinkedBlockingQueue.
+What is DelayQueue?
+What is PriorityBlockingQueue?
+Use cases of blocking queues.
+6. Iterators
+Basics
+What is Iterator?
+Difference between Enumeration and Iterator.
+Difference between Iterator and ListIterator.
+Methods of Iterator.
+Why Iterator introduced?
+ListIterator
+Features of ListIterator.
+Bidirectional traversal in ListIterator.
+Difference between Iterator remove() and Collection remove().
+Internal Working
+How fail-fast iterator works internally?
+What is expectedModCount?
+Why iterator remove() is safe?
+What causes ConcurrentModificationException?
+Why foreach loop internally uses Iterator?
+How Spliterator works?
+Spliterator
+What is Spliterator?
+Difference between Iterator and Spliterator.
+Characteristics of Spliterator.
+How Spliterator supports parallel streams?
+trySplit() working internally.
+7. Custom Sorting
+Comparable
+What is Comparable?
+Why Comparable used?
+How natural ordering works?
+Contract of compareTo().
+Problems if compareTo inconsistent with equals().
+Why compareTo should return negative/zero/positive?
+Comparator
+What is Comparator?
+Difference between Comparable and Comparator.
+Why Comparator introduced?
+Multiple sorting strategies using Comparator.
+Lambda-based Comparator examples.
+Chained comparators.
+nullsFirst() and nullsLast().
+reverseOrder() working.
+Sorting Internals
+How Collections.sort() works internally?
+What sorting algorithm used before Java 7?
+What is TimSort?
+Why TimSort efficient for partially sorted data?
+Difference between Arrays.sort() for primitives vs objects.
+Stable vs unstable sorting.
+Dual-Pivot QuickSort in Java.
+Complexity of sorting algorithms.
+8. Utility Classes
+Collections Class
+Difference between Collection and Collections.
+Important utility methods in Collections.
+How Collections.sort() works?
+synchronizedList() usage.
+unmodifiableList() usage.
+singletonList() usage.
+emptyList() usage.
+frequency() method.
+disjoint() method.
+binarySearch() requirements.
+shuffle() internals.
+reverse() complexity.
+copy() method behavior.
+Arrays Class
+Difference between Arrays and Collections utility classes.
+Arrays.sort() internals.
+Arrays.parallelSort() working.
+Arrays.asList() pitfalls.
+Why Arrays.asList() returns fixed-size list?
+Primitive array issue with Arrays.asList().
+Deep equals vs shallow equals.
+Objects Utility Class
+Use of Objects.equals().
+Use of Objects.hash().
+requireNonNull() usage.
+Optional Utility Questions
+Immutable collections introduced in Java 9.
+Difference between List.of() and Arrays.asList().
+Why immutable collections are useful?
+Internal optimizations in immutable collections.
+9. Performance Analysis
+Complexity Analysis
+Complexity comparison of all collections.
+Best collection for frequent reads.
+Best collection for frequent writes.
+Best collection for sorting-heavy operations.
+Best collection for concurrent reads.
+Best collection for ordered data.
+Best collection for unique sorted data.
+Best collection for LRU cache.
+Best collection for producer-consumer systems.
+Memory Analysis
+Which collection consumes most memory?
+Why LinkedList memory overhead is high?
+Why TreeMap memory-heavy?
+Impact of wrapper objects on memory.
+Real-World Scenarios
+Which collection would you choose for caching system?
+Which collection for autocomplete feature?
+Which collection for leaderboard ranking?
+Which collection for log processing?
+Which collection for frequency counting?
+Which collection for session management?
+Which collection for graph representation?
+Which collection for BFS/DFS implementation?
+Deep Internal / Expert-Level Questions
+Explain Red-Black Tree properties.
+Why Red-Black Tree preferred over AVL Tree in JCF?
+Explain hash flooding attack.
+How Java 8 improved collision handling?
+Explain memory locality impact on performance.
+Why arrays outperform linked structures?
+Explain false sharing in concurrent collections.
+How CAS works internally?
+What is ABA problem?
+Explain lock-free data structures.
+Difference between optimistic and pessimistic locking.
+Explain happens-before relationship in concurrent collections.
+How ConcurrentSkipListMap works?
+Difference between skip list and balanced tree.
+JVM optimizations impacting collection performance.
