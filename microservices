@@ -1,1 +1,88 @@
 
+
+
+what are monolith architecture?
+Advantages of monolith architecture?
+Disadvantages of monolith architecture?
+What are Microservices?
+What are the core characteristics of Microservices architecture?
+How do Microservices differ from Monolithic architecture?
+What problems do Microservices solve?
+What are the main advantages of Microservices?
+What are the disadvantages of Microservices?
+What is meant by loosely coupled services?
+What does independently deployable mean in Microservices?
+Why are Microservices considered highly scalable?
+How does Microservices architecture improve maintainability?
+What is resilience in Microservices?
+what is CAP theorem?
+what is saga pattern?
+
+
+
+
+
+What is Service Discovery in Microservices?
+Why is Service Registry required in distributed systems?
+What problems does Service Discovery solve?
+What is Eureka Server?
+What is the role of Eureka Server in Microservices architecture?
+What is Netflix OSS?
+How does Eureka integrate with Spring Cloud?
+What is the difference between Eureka Server and Eureka Client?
+How do Microservices register themselves with Eureka Server?
+How does service discovery work internally in Eureka?
+What is self-registration in Eureka?
+What is client-side service discovery?
+What is server-side service discovery?
+What is @EnableEurekaServer annotation?
+What is @EnableDiscoveryClient?
+
+
+
+
+
+
+What is Feign Client in Spring Cloud?
+Why is Feign used in Microservices architecture?
+What problems does Feign solve compared to RestTemplate?
+What is declarative REST client?
+How does Feign simplify inter-service communication?
+How does Feign integrate with Spring Boot?
+Which dependency is required for OpenFeign?
+What is @FeignClient annotation?
+How do you enable Feign Clients in Spring Boot?
+What is @EnableFeignClients?
+How does Feign work internally?
+How does Feign integrate with Eureka Server?
+How does service discovery work with Feign?
+
+
+
+
+What is an API Gateway in Microservices architecture?
+Why is API Gateway required in Microservices?
+What problems does API Gateway solve?
+How does API Gateway act as a single entry point?
+What is Gateway Filter in Spring Cloud Gateway?
+What is Spring Cloud Gateway?
+How does Spring Cloud Gateway work internally?
+
+
+
+
+What is Load Balancing in Microservices?
+Why is load balancing important in distributed systems?
+What problems does load balancing solve?
+What is Spring Cloud LoadBalancer?
+Why was Ribbon replaced by Spring Cloud LoadBalancer?
+What is client-side load balancing?
+Difference between client-side and server-side load balancing?
+How does Spring Cloud LoadBalancer work internally?What is round-robin load balancing?
+How does round-robin algorithm work?
+What are different load balancing algorithms?
+How does Spring Cloud Gateway use load balancing?
+What is lb://SERVICE-NAME in API Gateway?
+What is @LoadBalanced annotation?
+How does @LoadBalanced RestTemplate work internally?
+
