@@ -12,10 +12,63 @@ https://chatgpt.com/c/6a02aad7-0340-83ec-9bc1-477d69d29f13
 
 
 
+lis.stream()
+str.chars().mapToObj(c -> (char) c)
+mp.entrySet().stream()
+
+collect(Collectors.toList());
+collect(Collectors.toSet())
+collect(Collectors.groupingBy(String::length));
+collect(Collectors.groupingBy(c -> c, Collectors.counting()))
+collect(Collectors.joining(", "));
+collect(Collectors.partitioningBy(n -> n % 2 == 0));
+
+
+max(Integer::compare)
+max(Map.Entry.comparingByValue())
+max(Comparator.comparingInt(String::length))
 
 
 
+filter(n -> n % 2 == 0)
+filter(n -> !unique.add(n))
+filter(Objects::nonNull)
+filter(word -> word.equals(new StringBuilder(word).reverse().toString()))
+filter(list2::contains)
 
 
+
+map(String::toUpperCase)
+mapToInt(Integer::intValue)
+map(word -> new StringBuilder(word).reverse().toString())
+map(Map.Entry::getKey)
+mapToInt(n -> n * n)
+
+flatMap(List::stream)
+
+
+reduce("", (s1, s2) -> s1 + " " + s2).trim();
+reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2)
+
+anyMatch(s -> s.contains("API"));
+
+
+sorted()
+sorted(Comparator.reverseOrder())
+sorted(Comparator.comparingInt((Student s) -> s.score).reversed())
+
+sum();
+distinct()
+average()
+count();
+findFirst();
+skip(2)
+limit(2)
+
+
+
+orElse(0.0);
+orElse(null);
+orElseThrow();
 
 
