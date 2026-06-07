@@ -5,3 +5,63 @@ https://www.geeksforgeeks.org/git/git-interview-questions-and-answers/
 https://medium.com/@sachinsoni600517/complete-tutorial-of-git-and-github-for-basic-to-advanced-1dd34d12b90b
 
 https://www.tutorialspoint.com/git/index.htm
+
+
+
+
+
+
+
+
+Most Common Git Commands (1–2 Line Interview Answers)
+Command	Answer
+git init	Initializes a new Git repository in the current directory.
+git clone <url>	Creates a local copy of a remote repository.
+git status	Shows the current state of working directory and staging area.
+git add <file>	Adds file changes to the staging area for the next commit.
+git add .	Stages all modified and new files in the current directory.
+git commit -m "msg"	Saves staged changes to the local repository with a message.
+git log	Displays commit history of the repository.
+git log --oneline	Shows commit history in a compact one-line format.
+git diff	Displays unstaged changes between working directory and repository.
+git diff --staged	Shows differences between staged files and last commit.
+git branch	Lists all local branches and highlights the current branch.
+git branch <name>	Creates a new branch.
+git checkout <branch>	Switches to another branch.
+git checkout -b <branch>	Creates and switches to a new branch in one command.
+git switch <branch>	Modern command to switch branches.
+git switch -c <branch>	Creates and switches to a new branch.
+git merge <branch>	Combines changes from another branch into the current branch.
+git rebase <branch>	Reapplies commits on top of another branch for a cleaner history.
+git fetch	Downloads latest changes from remote without merging.
+git pull	Fetches and merges changes from the remote repository.
+git push	Uploads local commits to the remote repository.
+git remote -v	Displays configured remote repositories.
+git remote add origin <url>	Adds a remote repository named origin.
+git stash	Temporarily saves uncommitted changes.
+git stash pop	Restores the most recently stashed changes.
+git stash list	Lists all stashed changes.
+git reset --soft HEAD~1	Removes the last commit but keeps changes staged.
+git reset --mixed HEAD~1	Removes the last commit and unstages changes.
+git reset --hard HEAD~1	Removes the last commit and discards all changes.
+git revert <commit-id>	Creates a new commit that reverses a previous commit.
+git rm <file>	Deletes a file and stages the deletion.
+git mv old new	Renames or moves a file and stages the change.
+git tag <tag-name>	Creates a tag for a specific commit, usually for releases.
+git cherry-pick <commit-id>	Applies a specific commit from another branch.
+git show <commit-id>	Displays detailed information about a commit.
+git blame <file>	Shows who last modified each line in a file.
+git clean -fd	Removes untracked files and directories.
+git restore <file>	Discards local changes in a file.
+git restore --staged <file>	Removes a file from the staging area.
+git config --global user.name "name"	Sets the global Git username.
+git config --global user.email "email"	Sets the global Git email address.
+Interview Quick Summary
+git fetch → Download changes only.
+git pull → Download + merge changes.
+git merge → Combine branch histories.
+git rebase → Move commits to create linear history.
+git reset → Remove commits/history locally.
+git revert → Safely undo a commit by creating a new commit.
+git stash → Temporarily save work without committing.
+git cherry-pick → Copy a specific commit from another branch.
